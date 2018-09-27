@@ -1,0 +1,13 @@
+push Hello
+push World
+pop
+push Good
+push Morning
+pop
+push Night
+pop
+pop
+display
+
+
+
