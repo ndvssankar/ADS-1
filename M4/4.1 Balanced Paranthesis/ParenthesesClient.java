@@ -2,58 +2,33 @@
 import java.util.*;
 
 public class ParenthesesClient {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		Scanner scan = new Scanner(System.in);
 		int numberOfTestCases = Integer.parseInt(scan.nextLine());
-		Stack<Character> stack = new Stack<Character>();
 		for (int i=0; i<numberOfTestCases; i++) {
 			String line = scan.nextLine();
+			Stack<Character> stack = new Stack<Character>();
 			int j = 0;
 			for (j = 0; j < line.length(); j++) {
 				char ch = line.charAt(j);
 				if (ch == '(' || ch == '[' || ch == '{') {
-					try {
-						stack.push(ch);
-					} catch(Exception ex) {
-						System.out.println(ex.getMessage());
-					}
+					stack.push(ch);
 				} else {
-					if (ch == ')') {
-						try {
-						char popChar = stack.pop();
-						if (popChar == '(') {
-
-						}
-					} catch (Exception ex) {
-						System.out.println("NO");
+					if (stack.isEmpty()==false && ch == ')' && stack.peek() == '(')
+						stack.pop();
+					else if (stack.isEmpty()==false && ch == ']' && stack.peek() == '[')
+						stack.pop();
+					else if (stack.isEmpty()==false && ch == '}' && stack.peek() == '{')
+						stack.pop();
+					else
 						break;
-					}
-					} else if (ch == ']') {
-						try {
-						char popChar = stack.pop();
-						if (popChar == '[') {
-						}
-					} catch (Exception ex) {
-						System.out.println("NO");
-						break;
-					}
-					} else if (ch == '}') {
-						try {
-						char popChar = stack.pop();
-						if (popChar == '{') {
-						}
-					} catch(Exception ex) {
-						System.out.println("NO");
-						break;
-					}
-					}
 				}
 			}
-			if (j == line.length() && stack.isEmpty() == true) {
+			// System.out.println(j + " " + line.length() + " " + stack.isEmpty());
+			if (line.length() == j && stack.isEmpty())
 				System.out.println("YES");
-			} else if (j == line.length() || stack.isEmpty() == false) {
+			else
 				System.out.println("NO");
-			}
 		}
  	}
 }

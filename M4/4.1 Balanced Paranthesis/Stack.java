@@ -44,6 +44,12 @@ public class Stack<E> {
 		return sb.toString();
 	}
 
+	public E peek() {
+		if (first == null)
+			throw new NoSuchElementException("Stack is empty");
+		return first.data;
+	}
+
 	public E pop() {
 		if (first == null)
 			throw new NoSuchElementException("Stack is empty");
