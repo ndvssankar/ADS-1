@@ -21,9 +21,8 @@ public class ParenthesesClient {
 					if (ch == ')') {
 						try {
 						char popChar = stack.pop();
-						if (popChar != '(') {
-							System.out.println("NO");
-							break;
+						if (popChar == '(') {
+
 						}
 					} catch (Exception ex) {
 						System.out.println("NO");
@@ -32,9 +31,7 @@ public class ParenthesesClient {
 					} else if (ch == ']') {
 						try {
 						char popChar = stack.pop();
-						if (popChar != '[') {
-							System.out.println("NO");
-							break;
+						if (popChar == '[') {
 						}
 					} catch (Exception ex) {
 						System.out.println("NO");
@@ -43,9 +40,7 @@ public class ParenthesesClient {
 					} else if (ch == '}') {
 						try {
 						char popChar = stack.pop();
-						if (popChar != '{') {
-							System.out.println("NO");
-							break;
+						if (popChar == '{') {
 						}
 					} catch(Exception ex) {
 						System.out.println("NO");
