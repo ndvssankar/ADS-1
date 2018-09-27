@@ -56,6 +56,8 @@ public class ParenthesesClient {
 			}
 			if (j == line.length() && stack.isEmpty() == true) {
 				System.out.println("YES");
+			} else {
+				System.out.println("NO");
 			}
 		}
  	}
