@@ -13,18 +13,17 @@ public class ParenthesesClient {
 				char ch = line.charAt(j);
 				if (ch == '(' || ch == '[' || ch == '{') {
 					stack.push(ch);
+				} else if (stack.isEmpty() == false) {
+					if (ch == ')' && stack.peek() == '(')
+						stack.pop();
+					else if (ch == ']' && stack.peek() == '[')
+						stack.pop();
+					else if (ch == '}' && stack.peek() == '{')
+						stack.pop();
 				} else {
-					if (stack.isEmpty()==false && ch == ')' && stack.peek() == '(')
-						stack.pop();
-					else if (stack.isEmpty()==false && ch == ']' && stack.peek() == '[')
-						stack.pop();
-					else if (stack.isEmpty()==false && ch == '}' && stack.peek() == '{')
-						stack.pop();
-					else
-						break;
+					break;
 				}
 			}
-			// System.out.println(j + " " + line.length() + " " + stack.isEmpty());
 			if (line.length() == j && stack.isEmpty())
 				System.out.println("YES");
 			else
