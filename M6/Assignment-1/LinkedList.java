@@ -34,6 +34,20 @@ public class LinkedList<Item> implements Iterable<Item> {
 		public void remove() { }
 	}
 
+	public void pushFront(Item item) {
+		Node<Item> temp = new Node<Item>();
+		temp.item = item;
+		temp.next = null;
+
+		if (first == null) {
+			first = temp;
+			last = temp;
+		} else {
+			temp.next = first;
+			first = temp;
+		}
+	}
+
 	public void insert(Item item) {
 		Node<Item> temp = new Node<Item>();
 		temp.item = item;

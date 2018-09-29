@@ -4,9 +4,9 @@ import java.util.Iterator;
 class AddLargeNumbers {
     
     public static LinkedList numberToDigits(String number) {
-        LinkedList<Integer> ll = new LinkedList<Integer>();
+        LinkedList<String> ll = new LinkedList<String>();
         for (int i = 0; i < number.length(); i++) {
-            ll.insert(Integer.parseInt(number.charAt(i) + ""));
+            ll.insert(number.charAt(i) + "");
         }
         return ll;
     }
@@ -31,18 +31,20 @@ class AddLargeNumbers {
     public static LinkedList addLargeNumbers(LinkedList<String> list1, LinkedList<String> list2) {
         Stack<Integer> aStack = createStack(list1);
         Stack<Integer> bStack = createStack(list2);
-        LinkedList<String> result = new LinkedList();
+        LinkedList<String> result = new LinkedList<String>();
         int flag = 0;
         while (! (aStack.isEmpty() && bStack.isEmpty())) {
             int sum = aStack.pop() + bStack.pop() + flag;
             if (sum >= 10) {
                 flag = 1;
                 sum = sum - 10;
+            } else {
+                flag = 0;
             }
-            result.insert(sum + "");
+            result.pushFront(sum + "");
         }
         if (flag == 1)
-            result.insert(flag + "");
+            result.pushFront(flag + "");
         return result;
     }
 }

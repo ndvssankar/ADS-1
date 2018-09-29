@@ -84,8 +84,8 @@ public class Stack<E> implements Iterable<E> {
 	}
 
 	public E pop() {
-		if (first == null)
-			throw new NoSuchElementException("Stack is empty");
+		if (isEmpty())
+			return (E) new Integer(0);
 		E data = first.data;
 		first = first.next;
 		return data;
