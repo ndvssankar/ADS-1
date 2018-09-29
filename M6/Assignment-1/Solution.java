@@ -7,6 +7,15 @@ import java.util.Iterator;
  */
 class AddLargeNumbers {
 
+    /**
+     * Private Constructor.
+     */
+    private AddLargeNumbers() {
+
+    }
+    /**
+     * TEN represents a constant that indicates Integer 10.
+     */
     public static final int TEN = 10;
 
     /**
