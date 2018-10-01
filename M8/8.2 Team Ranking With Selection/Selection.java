@@ -27,31 +27,7 @@ public class Selection {
 		int N = a.length;
 		for (int i = 0; i < N; i++) {
 			int minIndex = minIndexElement(a, i);
-			System.out.println("Min Index is : " + minIndex);
 			exch(a, i, minIndex);
 		}
-	}
-
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		// int N = Integer.parseInt(scan.nextLine());
-		// Team[] teams = new Team[N];
-		int i = 0;
-		StringBuffer sb = new StringBuffer();
-		while(scan.hasNext()) {
-			sb.append(scan.nextLine() + "::");
-		}
-		String[] lines = sb.toString().split("::");
-		Team[] teams = new Team[lines.length];
-		for (String line : lines) {
-			String[] tokens = line.split(",");
-			teams[i++] = new Team(tokens[0],
-				Integer.parseInt(tokens[1]),
-				Integer.parseInt(tokens[2]),
-				Integer.parseInt(tokens[3]));
-		}
-		Selection.sort(teams);
-		String output = Arrays.toString(teams).replace("[","").replace("]","").replace(", ", ",");
-		System.out.println(output);
 	}
 }
