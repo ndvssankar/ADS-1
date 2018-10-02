@@ -51,6 +51,8 @@ public class Team implements Comparable {
 		Team that = (Team) other;
 		if (this.getNumberOfWins() > that.getNumberOfWins())
 			return -1;
+		if (this.getNumberOfWins() < that.getNumberOfWins())
+			return 1;
 
 		if (this.getNumberOfLosses() < that.getNumberOfLosses())
 			return -1;
