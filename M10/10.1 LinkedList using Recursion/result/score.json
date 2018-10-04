@@ -1,0 +1,1 @@
+{"version": "1", "message": "SUCCESS", "problem_id": "ads1_m10_a1", "user_id": "ndvssankar", "score": {"sample": {"0": {"execution_time": 0.14055919647216797, "passed": false}, "1": {"execution_time": 0.13729596138000488, "passed": false}, "2": {"execution_time": 0.1383061408996582, "passed": false}}, "hidden": {}}, "check_style_score": "0/1"}

@@ -1,0 +1,7 @@
+Starting audit...
+[ERROR] /Sankar/MSIT-2018/ADS-1/M10/10.1 LinkedList using Recursion/Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] /Sankar/MSIT-2018/ADS-1/M10/10.1 LinkedList using Recursion/Solution.java:6: First sentence should end with a period. [JavadocStyle]
+[ERROR] /Sankar/MSIT-2018/ADS-1/M10/10.1 LinkedList using Recursion/Solution.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] /Sankar/MSIT-2018/ADS-1/M10/10.1 LinkedList using Recursion/Solution.java:18: Line has trailing spaces. [RegexpSingleline]
+Audit done.
+Checkstyle ends with 4 errors.
