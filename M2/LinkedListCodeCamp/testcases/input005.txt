@@ -1,0 +1,17 @@
+size
+pushRight 1
+pushRight 2
+pushRight 3
+pushRight 4
+pushRight 5
+pushRight 6
+pushRight 7
+size
+size
+popLeft
+popLeft
+popLeft
+popLeft
+popLeft
+popLeft
+popLeft

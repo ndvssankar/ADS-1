@@ -1,0 +1,16 @@
+size
+pushRight 1
+pushRight 2
+pushRight 3
+pushRight 4
+pushRight 5
+pushRight 6
+pushRight 7
+size
+remove 4
+remove 1
+remove 7
+remove 6
+remove 5
+remove 2
+size
