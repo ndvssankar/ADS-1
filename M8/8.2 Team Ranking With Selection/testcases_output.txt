@@ -1,0 +1,159 @@
+########## Testcase 0: Failed ##########
+Expected Output: 
+Australia,India,SouthAfrica,England,Zimbabwe,Bangladesh,Ireland
+Your Output: 
+V : India,5,4,2 	 And : England,4,3,2
+V : Australia,6,3,2 	 And : India,5,4,2
+V : SouthAfrica,5,4,3 	 And : Australia,6,3,2
+V : Bangladesh,3,2,4 	 And : Australia,6,3,2
+V : Zimbabwe,3,6,4 	 And : Australia,6,3,2
+V : Ireland,3,1,4 	 And : Australia,6,3,2
+Swapped : Australia,6,3,2	 and : England,4,3,2
+V : England,4,3,2 	 And : India,5,4,2
+V : SouthAfrica,5,4,3 	 And : India,5,4,2
+V : Bangladesh,3,2,4 	 And : India,5,4,2
+V : Zimbabwe,3,6,4 	 And : India,5,4,2
+V : Ireland,3,1,4 	 And : India,5,4,2
+Swapped : India,5,4,2	 and : India,5,4,2
+V : SouthAfrica,5,4,3 	 And : England,4,3,2
+V : Bangladesh,3,2,4 	 And : SouthAfrica,5,4,3
+V : Zimbabwe,3,6,4 	 And : SouthAfrica,5,4,3
+V : Ireland,3,1,4 	 And : SouthAfrica,5,4,3
+Swapped : SouthAfrica,5,4,3	 and : England,4,3,2
+V : Bangladesh,3,2,4 	 And : England,4,3,2
+V : Zimbabwe,3,6,4 	 And : England,4,3,2
+V : Ireland,3,1,4 	 And : England,4,3,2
+Swapped : England,4,3,2	 and : England,4,3,2
+V : Zimbabwe,3,6,4 	 And : Bangladesh,3,2,4
+V : Ireland,3,1,4 	 And : Zimbabwe,3,6,4
+Swapped : Zimbabwe,3,6,4	 and : Bangladesh,3,2,4
+V : Ireland,3,1,4 	 And : Bangladesh,3,2,4
+Swapped : Bangladesh,3,2,4	 and : Bangladesh,3,2,4
+Swapped : Ireland,3,1,4	 and : Ireland,3,1,4
+Australia,6,3,2,India,5,4,2,SouthAfrica,5,4,3,England,4,3,2,Zimbabwe,3,6,4,Bangladesh,3,2,4,Ireland,3,1,4
+----------------------------------------
+########## Testcase 1: Failed ##########
+Expected Output: 
+Zimbabwe,SouthAfrica,Bangladesh,Ireland
+Your Output: 
+V : Bangladesh,3,2,2 	 And : SouthAfrica,5,4,3
+V : Zimbabwe,5,6,3 	 And : SouthAfrica,5,4,3
+V : Ireland,3,1,4 	 And : Zimbabwe,5,6,3
+Swapped : Zimbabwe,5,6,3	 and : SouthAfrica,5,4,3
+V : SouthAfrica,5,4,3 	 And : Bangladesh,3,2,2
+V : Ireland,3,1,4 	 And : SouthAfrica,5,4,3
+Swapped : SouthAfrica,5,4,3	 and : Bangladesh,3,2,2
+V : Ireland,3,1,4 	 And : Bangladesh,3,2,2
+Swapped : Bangladesh,3,2,2	 and : Bangladesh,3,2,2
+Swapped : Ireland,3,1,4	 and : Ireland,3,1,4
+Zimbabwe,5,6,3,SouthAfrica,5,4,3,Bangladesh,3,2,2,Ireland,3,1,4
+----------------------------------------
+########## Testcase 2: Failed ##########
+Expected Output: 
+Australia,Zimbabwe,SouthAfrica,England,Ireland,Bangladesh,India
+Your Output: 
+V : India,2,4,2 	 And : England,4,3,2
+V : Australia,6,3,2 	 And : England,4,3,2
+V : SouthAfrica,5,4,3 	 And : Australia,6,3,2
+V : Bangladesh,3,2,4 	 And : Australia,6,3,2
+V : Zimbabwe,6,6,4 	 And : Australia,6,3,2
+V : Ireland,4,1,4 	 And : Australia,6,3,2
+Swapped : Australia,6,3,2	 and : England,4,3,2
+V : England,4,3,2 	 And : India,2,4,2
+V : SouthAfrica,5,4,3 	 And : England,4,3,2
+V : Bangladesh,3,2,4 	 And : SouthAfrica,5,4,3
+V : Zimbabwe,6,6,4 	 And : SouthAfrica,5,4,3
+V : Ireland,4,1,4 	 And : Zimbabwe,6,6,4
+Swapped : Zimbabwe,6,6,4	 and : India,2,4,2
+V : SouthAfrica,5,4,3 	 And : England,4,3,2
+V : Bangladesh,3,2,4 	 And : SouthAfrica,5,4,3
+V : India,2,4,2 	 And : SouthAfrica,5,4,3
+V : Ireland,4,1,4 	 And : SouthAfrica,5,4,3
+Swapped : SouthAfrica,5,4,3	 and : England,4,3,2
+V : Bangladesh,3,2,4 	 And : England,4,3,2
+V : India,2,4,2 	 And : England,4,3,2
+V : Ireland,4,1,4 	 And : England,4,3,2
+Swapped : England,4,3,2	 and : England,4,3,2
+V : India,2,4,2 	 And : Bangladesh,3,2,4
+V : Ireland,4,1,4 	 And : Bangladesh,3,2,4
+Swapped : Ireland,4,1,4	 and : Bangladesh,3,2,4
+V : Bangladesh,3,2,4 	 And : India,2,4,2
+Swapped : Bangladesh,3,2,4	 and : India,2,4,2
+Swapped : India,2,4,2	 and : India,2,4,2
+Australia,6,3,2,Zimbabwe,6,6,4,SouthAfrica,5,4,3,England,4,3,2,Ireland,4,1,4,Bangladesh,3,2,4,India,2,4,2
+----------------------------------------
+########## Testcase 3: Failed ##########
+Expected Output: 
+Zimbabwe,Bangladesh,Australia,Ireland,SouthAfrica,India,England
+Your Output: 
+V : India,0,4,2 	 And : England,0,3,2
+V : Australia,6,3,2 	 And : India,0,4,2
+V : SouthAfrica,5,4,3 	 And : Australia,6,3,2
+V : Bangladesh,13,2,4 	 And : Australia,6,3,2
+V : Zimbabwe,13,6,4 	 And : Bangladesh,13,2,4
+V : Ireland,6,1,4 	 And : Zimbabwe,13,6,4
+Swapped : Zimbabwe,13,6,4	 and : England,0,3,2
+V : Australia,6,3,2 	 And : India,0,4,2
+V : SouthAfrica,5,4,3 	 And : Australia,6,3,2
+V : Bangladesh,13,2,4 	 And : Australia,6,3,2
+V : England,0,3,2 	 And : Bangladesh,13,2,4
+V : Ireland,6,1,4 	 And : Bangladesh,13,2,4
+Swapped : Bangladesh,13,2,4	 and : India,0,4,2
+V : SouthAfrica,5,4,3 	 And : Australia,6,3,2
+V : India,0,4,2 	 And : Australia,6,3,2
+V : England,0,3,2 	 And : Australia,6,3,2
+V : Ireland,6,1,4 	 And : Australia,6,3,2
+Swapped : Australia,6,3,2	 and : Australia,6,3,2
+V : India,0,4,2 	 And : SouthAfrica,5,4,3
+V : England,0,3,2 	 And : SouthAfrica,5,4,3
+V : Ireland,6,1,4 	 And : SouthAfrica,5,4,3
+Swapped : Ireland,6,1,4	 and : SouthAfrica,5,4,3
+V : England,0,3,2 	 And : India,0,4,2
+V : SouthAfrica,5,4,3 	 And : India,0,4,2
+Swapped : SouthAfrica,5,4,3	 and : India,0,4,2
+V : India,0,4,2 	 And : England,0,3,2
+Swapped : India,0,4,2	 and : England,0,3,2
+Swapped : England,0,3,2	 and : England,0,3,2
+Zimbabwe,13,6,4,Bangladesh,13,2,4,Australia,6,3,2,Ireland,6,1,4,SouthAfrica,5,4,3,India,0,4,2,England,0,3,2
+----------------------------------------
+########## Testcase 4: Failed ##########
+Expected Output: 
+England
+Your Output: 
+Swapped : England,0,3,2	 and : England,0,3,2
+England,0,3,2
+----------------------------------------
+########## Testcase 5: Failed ##########
+Expected Output: 
+Ireland,Zimbabwe,Bangladesh,SouthAfrica,Australia,India,England
+Your Output: 
+V : India,10,2,14 	 And : England,10,1,14
+V : Australia,10,3,14 	 And : India,10,2,14
+V : SouthAfrica,10,4,14 	 And : Australia,10,3,14
+V : Bangladesh,10,5,14 	 And : SouthAfrica,10,4,14
+V : Zimbabwe,10,6,14 	 And : Bangladesh,10,5,14
+V : Ireland,10,7,14 	 And : Zimbabwe,10,6,14
+Swapped : Ireland,10,7,14	 and : England,10,1,14
+V : Australia,10,3,14 	 And : India,10,2,14
+V : SouthAfrica,10,4,14 	 And : Australia,10,3,14
+V : Bangladesh,10,5,14 	 And : SouthAfrica,10,4,14
+V : Zimbabwe,10,6,14 	 And : Bangladesh,10,5,14
+V : England,10,1,14 	 And : Zimbabwe,10,6,14
+Swapped : Zimbabwe,10,6,14	 and : India,10,2,14
+V : SouthAfrica,10,4,14 	 And : Australia,10,3,14
+V : Bangladesh,10,5,14 	 And : SouthAfrica,10,4,14
+V : India,10,2,14 	 And : Bangladesh,10,5,14
+V : England,10,1,14 	 And : Bangladesh,10,5,14
+Swapped : Bangladesh,10,5,14	 and : Australia,10,3,14
+V : Australia,10,3,14 	 And : SouthAfrica,10,4,14
+V : India,10,2,14 	 And : SouthAfrica,10,4,14
+V : England,10,1,14 	 And : SouthAfrica,10,4,14
+Swapped : SouthAfrica,10,4,14	 and : SouthAfrica,10,4,14
+V : India,10,2,14 	 And : Australia,10,3,14
+V : England,10,1,14 	 And : Australia,10,3,14
+Swapped : Australia,10,3,14	 and : Australia,10,3,14
+V : England,10,1,14 	 And : India,10,2,14
+Swapped : India,10,2,14	 and : India,10,2,14
+Swapped : England,10,1,14	 and : England,10,1,14
+Ireland,10,7,14,Zimbabwe,10,6,14,Bangladesh,10,5,14,SouthAfrica,10,4,14,Australia,10,3,14,India,10,2,14,England,10,1,14
+----------------------------------------

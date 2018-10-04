@@ -43,4 +43,20 @@ public final class Solution {
                         replace("]", "").replace(", ", ",");
         System.out.println(output);
     }
+
+    // public static void main(String[] args) {
+    //     Scanner scan = new Scanner(System.in);
+    //     int i = 0;
+    //     List<Team> teams = new List<Team>();
+    //     while (scan.hasNext()) {
+    //         String[] tokens = scan.nextLine().split(",");
+    //         teams.add(new Team(tokens[0],
+    //                               Integer.parseInt(tokens[1]),
+    //                               Integer.parseInt(tokens[2]),
+    //                               Integer.parseInt(tokens[THREE])));
+    //     }
+    //     // Selection.sort(teams);
+    //     teams.sort();
+    //     System.out.println(teams);
+    // }
 }
