@@ -69,7 +69,7 @@ public class Team implements Comparable {
 
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
-		sb.append(this.getTeamName() + ",");
+		sb.append(this.getTeamName());
 		// sb.append(this.getNumberOfWins() + ",");
 		// sb.append(this.getNumberOfDraws() + ",");
 		// sb.append(this.getNumberOfLosses());
