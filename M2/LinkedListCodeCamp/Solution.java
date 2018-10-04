@@ -29,10 +29,6 @@ public class Solution {
                 case "remove":
                 ll.remove(Integer.parseInt(line[1]));
                 System.out.println(ll);
-                case "reverse":
-                System.out.println("In reverse");
-                ll.reverse();
-                System.out.println(ll);
                 break;
                 default:
                 break;
