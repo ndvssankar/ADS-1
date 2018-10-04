@@ -14,7 +14,7 @@ public class Selection {
 	}
 
 	private static boolean less(Comparable v, Comparable w) {
-		System.out.println("V : " + (Team)v + " \t And : " + (Team)w);
+		// System.out.println("V : " + (Team)v + " \t And : " + (Team)w);
 		return v.compareTo(w) < 0;
 	}
 
@@ -22,7 +22,7 @@ public class Selection {
 		Comparable swap = a[i];
 		a[i] = a[j];
 		a[j] = swap;
-		System.out.println("Swapped : " + (Team) a[i] + "\t and : " + (Team) a[j]);
+		// System.out.println("Swapped : " + (Team) a[i] + "\t and : " + (Team) a[j]);
 	}
 
 	public static void sort(Comparable[] a) {
