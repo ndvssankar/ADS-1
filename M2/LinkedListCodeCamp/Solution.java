@@ -19,6 +19,7 @@ public class Solution {
                 System.out.println(ll);
                 break;
                 case "removeLeft":
+                case "popLeft":
                 ll.popLeft();
                 System.out.println(ll);
                 break;
