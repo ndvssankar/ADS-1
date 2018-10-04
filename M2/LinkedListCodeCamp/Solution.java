@@ -33,6 +33,7 @@ public class Solution {
                 System.out.println("In reverse");
                 ll.reverse();
                 System.out.println(ll);
+                break;
                 default:
                 break;
             }
