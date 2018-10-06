@@ -19,7 +19,7 @@ public final class Insertion {
      * true if the first object is less than second object.
      * @param  v the first object.
      * @param  w the second object.
-     * @return   boolean if the first object is less than second object.
+     * @return flag boolean if the first object is less than second object.
      */
     private static boolean less(final Comparable v,
                                 final Comparable w) {
