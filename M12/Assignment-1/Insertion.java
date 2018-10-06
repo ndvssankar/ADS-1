@@ -23,7 +23,11 @@ public final class Insertion {
      */
     private static boolean less(final Comparable v,
                                 final Comparable w) {
-        return v.compareTo(w) < 0;
+        boolean flag = false;
+        if (v.compareTo(w) < 0) {
+            flag = true;
+        }
+        return flag;
     }
 
     /**
