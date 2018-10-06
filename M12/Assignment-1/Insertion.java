@@ -36,7 +36,7 @@ public final class Insertion {
      * @param i the ith index position.
      * @param j the jth index position.
      */
-    private static void exch(Comparable[] a, final int i,
+    private static void exch(final Comparable[] a, final int i,
                              final int j) {
         Comparable swap = a[i];
         a[i] = a[j];
