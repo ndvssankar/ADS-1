@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
 /**
- * Solution class for alloting the seats based on the given
- * criteria.
+ * Solution class for alloting the seats based on the given criteria.
  * @author Siva Sankar.
  */
 public final class Solution {
@@ -109,8 +108,8 @@ public final class Solution {
          }
 
          if (noSC > 0) {
-            if (students[i].getRc().equals("ST") &&
-                  students[i].getAlloted() != true) {
+            if (students[i].getRc().equals("ST")
+               && students[i].getAlloted() != true) {
                noST--;
                students[i].setAlloted(true);
                alloted[k++] = students[i];
