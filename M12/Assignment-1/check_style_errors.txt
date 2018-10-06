@@ -1,6 +1,2 @@
 Starting audit...
-[ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:102:36: 'rc' hides a field. [HiddenField]
-[ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:118:33: 'tm' hides a field. [HiddenField]
-[ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:118:33: Expected @param tag for 'tm'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 3 errors.

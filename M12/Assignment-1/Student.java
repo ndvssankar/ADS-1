@@ -97,10 +97,10 @@ public final class Student implements Comparable<Student> {
 
     /**
      * Sets the student's reservation category.
-     * @param rc Reservation Category.
+     * @param resCat Reservation Category.
      */
-    public void setRc(final String rc) {
-        this.rc = rc;
+    public void setRc(final String resCat) {
+        this.rc = resCat;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class Student implements Comparable<Student> {
 
     /**
      * sets the student's total marks.
-     * @param tm.
+     * @param totalMarks totalMarks obtained.
      */
-    public void setTm(final int tm) {
-        this.tm = tm;
+    public void setTm(final int totalMarks) {
+        this.tm = totalMarks;
     }
 
     /**
