@@ -114,8 +114,8 @@ public class Student implements Comparable<Student> {
 		StringBuffer sb = new StringBuffer();
 		sb.append(this.getStudentName() + ",");
 		sb.append(this.getTm() + ",");
-		sb.append(this.getRc() + ",");
-		sb.append(this.getAlloted());
+		sb.append(this.getRc());
+		// sb.append(this.getAlloted());
 		return sb.toString();
 	}
 }
