@@ -88,8 +88,8 @@ public final class Solution {
          }
 
          if (noBC > 0) {
-            if (students[i].getRc().equals("BC") &&
-                  students[i].getAlloted() != true) {
+            if (students[i].getRc().equals("BC")
+                  && students[i].getAlloted() != true) {
                noBC--;
                students[i].setAlloted(true);
                alloted[k++] = students[i];
@@ -98,8 +98,8 @@ public final class Solution {
          }
 
          if (noSC > 0) {
-            if (students[i].getRc().equals("SC") &&
-                  students[i].getAlloted() != true) {
+            if (students[i].getRc().equals("SC")
+                  && students[i].getAlloted() != true) {
                noSC--;
                students[i].setAlloted(true);
                alloted[k++] = students[i];
@@ -109,7 +109,7 @@ public final class Solution {
 
          if (noSC > 0) {
             if (students[i].getRc().equals("ST")
-               && students[i].getAlloted() != true) {
+                  && students[i].getAlloted() != true) {
                noST--;
                students[i].setAlloted(true);
                alloted[k++] = students[i];
@@ -119,8 +119,8 @@ public final class Solution {
       }
 
       for (i = 0; i < N; i++) {
-         if (vacancies > 0 && students[i].getRc().equals("Open") &&
-               students[i].getAlloted() == false) {
+         if (vacancies > 0 && students[i].getRc().equals("Open")
+               && students[i].getAlloted() == false) {
             students[i].setAlloted(true);
             alloted[k++] = students[i];
             vacancies--;
