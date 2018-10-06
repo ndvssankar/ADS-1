@@ -21,7 +21,8 @@ public final class Insertion {
      * @param  w the second object.
      * @return   boolean if the first object is less than second object.
      */
-    private static boolean less(Comparable v, Comparable w) {
+    private static boolean less(final Comparable v,
+                                final Comparable w) {
         return v.compareTo(w) < 0;
     }
 
@@ -31,7 +32,8 @@ public final class Insertion {
      * @param i the ith index position.
      * @param j the jth index position.
      */
-    private static void exch(Comparable[] a, int i, int j) {
+    private static void exch(Comparable[] a, final int i,
+                             final int j) {
         Comparable swap = a[i];
         a[i] = a[j];
         a[j] = swap;
@@ -41,12 +43,12 @@ public final class Insertion {
      * Sorts the elements using insertion sort.
      * @param a contains elements that are to be sorted.
      */
-    public static void sort(Comparable[] a) {
+    public static void sort(final Comparable[] a) {
         int N = a.length;
         for (int i = 0; i < N; i++) {
             for (int j = i; j > 0; j--) {
-                if (less (a[j], a[j-1])) {
-                    exch(a, j, j-1);
+                if (less (a[j], a[j - 1])) {
+                    exch(a, j, j - 1);
                 } else
                     break;
             }
