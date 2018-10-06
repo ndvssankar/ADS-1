@@ -4,28 +4,59 @@ import java.text.SimpleDateFormat;
 /**
  * Students class that uses Comaprable to sort the student objects.
  * student who got more total marks will be given the priority
- * if total marks are equal then student who got more marks 
- * in subject 3 will be given the priority. 
+ * if total marks are equal then student who got more marks
+ * in subject 3 will be given the priority.
  * if subject 3 marks are equal then student who got more marks
- * in subject 2 will be given the priority. 
+ * in subject 2 will be given the priority.
  * if subject 2 marks are equal then younger student
  * will be given priority.
- * @author Siva Sankar
+ * @author Siva Sankar.
  */
-public class Student implements Comparable<Student> {
+public final class Student implements Comparable<Student> {
+
+    /**
+     * Student's name.
+     */
     private String studentName;
+
+    /**
+     * Student's Date of birth.
+     */
     private Date db;
+
+    /**
+     * Marks in subject 1.
+     */
     private int m1;
+
+    /**
+     * Marks in subject 2.
+     */
     private int m2;
+
+    /**
+     * Marks in subject 3.
+     */
     private int m3;
+
+    /**
+     * Total marks.
+     */
     private int tm;
+
+    /**
+     * Reservation category.
+     */
     private String rc;
+
+    /**
+     * Allotment status.
+     */
     private boolean alloted;
-    
+
     /**
      * returns true, if the student is already alloted,
      * otherwise false.
-     * 
      * @return true if alloted, otherwise false.
      */
     public boolean getAlloted() {
@@ -36,8 +67,8 @@ public class Student implements Comparable<Student> {
      * Changes the alloted status to true once the allotment is done.
      * @param alloted should be either true or false.
      */
-    public void setAlloted(boolean alloted) {
-        this.alloted = alloted;
+    public void setAlloted(final boolean allot) {
+        this.alloted = allot;
     }
 
     /**
@@ -50,10 +81,10 @@ public class Student implements Comparable<Student> {
 
     /**
      * sets the student's date of birth.
-     * @param db [description]
+     * @param dateOfBirth Date of birth.
      */
-    public void setDb(Date db) {
-        this.db = db;
+    public void setDb(final Date dateOfBirth) {
+        this.db = dateOfBirth;
     }
 
     /**
@@ -66,9 +97,9 @@ public class Student implements Comparable<Student> {
 
     /**
      * Sets the student's reservation category.
-     * @param rc.
+     * @param rc Reservation Category.
      */
-    public void setRc(String rc) {
+    public void setRc(final String rc) {
         this.rc = rc;
     }
 
@@ -84,37 +115,41 @@ public class Student implements Comparable<Student> {
      * sets the student's total marks.
      * @param tm.
      */
-    public void setTm(int tm) {
+    public void setTm(final int tm) {
         this.tm = tm;
     }
 
     /**
      * Constructs the object based on the parameters.
-     * @param  studentName Student Name
-     * @param  dateOfBirth Date of Birth
+     * @param  studentName Student Name.
+     * @param  dateOfBirth Date of Birth.
      * @param  m1          Marks in first subject.
      * @param  m2          Marks in second subject.
      * @param  m3          Marks in third subject.
      * @param  tm          Total Marks.
      * @param  rc          Reservation Category.
      */
-    public Student(String studentName, String dateOfBirth,
-                   int m1, int m2, int m3, int tm,
-                   String rc) {
-        this.studentName = studentName;
+    public Student(final String stuName,
+        final String dateOfBirth,
+                   final int marksInFirstSubject,
+                   final int marksInSecondSubject,
+                   final int marksInThirdSubject,
+                   final int totalMarks,
+                   final String reservationCategory) {
+        this.studentName = stuName;
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
         try {
-            this.db = sdf.parse(dateOfBirth);   
+            this.db = sdf.parse(dateOfBirth);
         } catch(Exception ex) {
             ex.printStackTrace();
         }
         
-        this.m1 = m1;
-        this.m2 = m2;
-        this.m3 = m3;
-        this.tm = tm;
-        this.rc = rc;
+        this.m1 = marksInFirstSubject;
+        this.m2 = marksInSecondSubject;
+        this.m3 = marksInThirdSubject;
+        this.tm = totalMarks;
+        this.rc = reservationCategory;
         this.alloted = false;
     }
 
@@ -128,10 +163,10 @@ public class Student implements Comparable<Student> {
 
     /**
      * Sets the m3 to the 3rd subject.
-     * @param m3.
+     * @param marks.
      */
-    public void setM3(int m3) {
-        this.m3 = m3;
+    public void setM3(final int marks) {
+        this.m3 = marks;
     }
 
     /**
@@ -144,10 +179,10 @@ public class Student implements Comparable<Student> {
 
     /**
      * Sets marks in subject 2.
-     * @param m2.
+     * @param marks.
      */
-    public void setM2(int m2) {
-        this.m2 = m2;
+    public void setM2(final int marks) {
+        this.m2 = marks;
     }
 
     /**
@@ -160,10 +195,10 @@ public class Student implements Comparable<Student> {
 
     /**
      * Sets the marks to subject 1.
-     * @param m1.
+     * @param marks.
      */
-    public void setM1(int m1) {
-        this.m1 = m1;
+    public void setM1(final int marks) {
+        this.m1 = marks;
     }
 
     /**
@@ -175,30 +210,52 @@ public class Student implements Comparable<Student> {
     }
 
     /**
-     * When required the student's name can be updated.
-     * @param studentName.
+     * Sets the student name.
+     * @param sName.
      */
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
+    public void setStudentName(final String sName) {
+        this.studentName = sName;
     }
 
     /**
      * Compares two objects of types students.
-     * @param  that second Student.
+     * @param  that Student.
      * @return integer based on the requirements.
      */
-    public int compareTo(Student that) {
-        if (this.getTm() > that.getTm()) return -1;
-        if (this.getTm() < that.getTm()) return 1;
+    public int compareTo(final Student that) {
 
-        if (this.getM3() > that.getM3()) return -1;
-        if (this.getM3() < that.getM3()) return 1;
+        if (this.getTm() > that.getTm()) {
+            return -1;
+        }
 
-        if (this.getM2() > that.getM2()) return -1;
-        if (this.getM2() < that.getM2()) return 1;
+        if (this.getTm() < that.getTm()) {
+            return 1;
+        }
 
-        if (this.getDb().compareTo(that.getDb()) < 0) return 1;
-        if (this.getDb().compareTo(that.getDb()) > 0) return -1;
+        if (this.getM3() > that.getM3()) {
+            return -1;
+        }
+
+        if (this.getM3() < that.getM3()) {
+            return 1;
+        }
+
+        if (this.getM2() > that.getM2()) {
+            return -1;
+        }
+
+        if (this.getM2() < that.getM2()) {
+            return 1;
+        }
+
+        if (this.getDb().compareTo(that.getDb()) < 0) {
+            return 1;
+        }
+
+        if (this.getDb().compareTo(that.getDb()) > 0) {
+            return -1;
+        }
+
         return 0;
     }
 
