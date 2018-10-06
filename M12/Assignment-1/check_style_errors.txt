@@ -1,26 +1,6 @@
 Starting audit...
-[ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:68:8: Unused @param tag for 'alloted'. [JavadocMethod]
-[ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:70:42: Expected @param tag for 'allot'. [JavadocMethod]
 [ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:102:36: 'rc' hides a field. [HiddenField]
 [ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:118:33: 'tm' hides a field. [HiddenField]
 [ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:118:33: Expected @param tag for 'tm'. [JavadocMethod]
-[ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:124:8: Unused @param tag for 'studentName'. [JavadocMethod]
-[ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:126:8: Unused @param tag for 'm1'. [JavadocMethod]
-[ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:127:8: Unused @param tag for 'm2'. [JavadocMethod]
-[ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:128:8: Unused @param tag for 'm3'. [JavadocMethod]
-[ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:129:8: Unused @param tag for 'tm'. [JavadocMethod]
-[ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:130:8: Unused @param tag for 'rc'. [JavadocMethod]
-[ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:132:33: Expected @param tag for 'stuName'. [JavadocMethod]
-[ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:134:30: Expected @param tag for 'marksInFirstSubject'. [JavadocMethod]
-[ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:135:30: Expected @param tag for 'marksInSecondSubject'. [JavadocMethod]
-[ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:136:30: Expected @param tag for 'marksInThirdSubject'. [JavadocMethod]
-[ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:137:30: Expected @param tag for 'totalMarks'. [JavadocMethod]
-[ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:138:33: Expected @param tag for 'reservationCategory'. [JavadocMethod]
-[ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:144:16: 'catch' is not followed by whitespace. [WhitespaceAround]
-[ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:147: Line has trailing spaces. [RegexpSingleline]
-[ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:168:33: Expected @param tag for 'marks'. [JavadocMethod]
-[ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:184:33: Expected @param tag for 'marks'. [JavadocMethod]
-[ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:200:33: Expected @param tag for 'marks'. [JavadocMethod]
-[ERROR] /Sankar/MSIT-2018/ADS-1/M12/Assignment-1/Student.java:216:45: Expected @param tag for 'sName'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 23 errors.
+Checkstyle ends with 3 errors.

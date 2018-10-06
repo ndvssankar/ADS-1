@@ -65,7 +65,7 @@ public final class Student implements Comparable<Student> {
 
     /**
      * Changes the alloted status to true once the allotment is done.
-     * @param alloted should be either true or false.
+     * @param allot should be either true or false.
      */
     public void setAlloted(final boolean allot) {
         this.alloted = allot;
@@ -121,35 +121,35 @@ public final class Student implements Comparable<Student> {
 
     /**
      * Constructs the object based on the parameters.
-     * @param  studentName Student Name.
+     * @param  stuName Student Name.
      * @param  dateOfBirth Date of Birth.
-     * @param  m1          Marks in first subject.
-     * @param  m2          Marks in second subject.
-     * @param  m3          Marks in third subject.
-     * @param  tm          Total Marks.
-     * @param  rc          Reservation Category.
+     * @param  marksInFirstSubject Marks in first subject.
+     * @param  marksInSecondSubject Marks in second subject.
+     * @param  marksInThirdSubject Marks in third subject.
+     * @param  totalMarks  Total Marks.
+     * @param  resCat      Reservation Category.
      */
     public Student(final String stuName,
-        final String dateOfBirth,
+                   final String dateOfBirth,
                    final int marksInFirstSubject,
                    final int marksInSecondSubject,
                    final int marksInThirdSubject,
                    final int totalMarks,
-                   final String reservationCategory) {
+                   final String resCat) {
         this.studentName = stuName;
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
         try {
             this.db = sdf.parse(dateOfBirth);
-        } catch(Exception ex) {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
-        
+
         this.m1 = marksInFirstSubject;
         this.m2 = marksInSecondSubject;
         this.m3 = marksInThirdSubject;
         this.tm = totalMarks;
-        this.rc = reservationCategory;
+        this.rc = resCat;
         this.alloted = false;
     }
 
@@ -163,7 +163,7 @@ public final class Student implements Comparable<Student> {
 
     /**
      * Sets the m3 to the 3rd subject.
-     * @param marks.
+     * @param marks in third subject.
      */
     public void setM3(final int marks) {
         this.m3 = marks;
@@ -179,7 +179,7 @@ public final class Student implements Comparable<Student> {
 
     /**
      * Sets marks in subject 2.
-     * @param marks.
+     * @param marks in second subject.
      */
     public void setM2(final int marks) {
         this.m2 = marks;
@@ -195,7 +195,7 @@ public final class Student implements Comparable<Student> {
 
     /**
      * Sets the marks to subject 1.
-     * @param marks.
+     * @param marks Marks in first subject.
      */
     public void setM1(final int marks) {
         this.m1 = marks;
@@ -211,7 +211,7 @@ public final class Student implements Comparable<Student> {
 
     /**
      * Sets the student name.
-     * @param sName.
+     * @param sName specifies student's name.
      */
     public void setStudentName(final String sName) {
         this.studentName = sName;
