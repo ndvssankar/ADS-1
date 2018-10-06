@@ -2,7 +2,7 @@ import java.util.*;
 
 /**
  * This class demostrates the insertion sort which is used to sort
- * the comparable elements .
+ * the comparable elements.
  * @author Siva Sankar.
  */
 public final class Insertion {
@@ -49,8 +49,9 @@ public final class Insertion {
             for (int j = i; j > 0; j--) {
                 if (less (a[j], a[j - 1])) {
                     exch(a, j, j - 1);
-                } else
+                } else {
                     break;
+                }
             }
         }
     }
