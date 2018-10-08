@@ -17,7 +17,7 @@ public final class Solution {
 	 * To demonstrate the solution method.
 	 * @param args the command line args.
 	 */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		String type = scan.nextLine();
 		int N = Integer.parseInt(scan.nextLine());
