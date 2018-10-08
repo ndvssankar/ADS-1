@@ -90,8 +90,12 @@ public class MinPQ<Key extends Comparable<Key>> {
     public void sink(int k) {
         while ((2 * k) <= N) {
             int j = 2 * k;
-            if (j < N && less(j, j+1)) j++;
-            if (!less(k, j)) break;
+            if (j < N && less(j, j+1)) {
+                j++;
+            }
+            if (!less(k, j)) {
+                break;
+            }
             exch (k, j);
             k = j;
         }
@@ -104,7 +108,7 @@ public class MinPQ<Key extends Comparable<Key>> {
     public void swim(int k) {
         while (k > 1 && less(k, k/2)) {
             exch(k/2, k);
-            k = k / 2;
+            k = k/2;
         }
     }
 
@@ -149,11 +153,17 @@ public class MinPQ<Key extends Comparable<Key>> {
      * the root, otherwise false.
      */
     public boolean isMinPQ(int k) {
-        if (k > N) return true;
-        int left = 2 * k;
-        int right = 2 * k + 1;
-        if (left <= N && !less(k, left)) return false;
-        if (right <= N && !less(k, right)) return false;
+        if (k > N) {
+            return true;
+        }
+        int left = 2*k;
+        int right = 2*k + 1;
+        if (left <= N && !less(k, left)) {
+            return false;
+        }
+        if (right <= N && !less(k, right)) {
+            return false;
+        }
         return isMinPQ(left) && isMinPQ(right);
     }
 
