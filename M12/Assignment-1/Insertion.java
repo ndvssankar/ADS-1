@@ -1,4 +1,3 @@
-import java.util.*;
 
 /**
  * This class demostrates the insertion sort which is used to sort
@@ -15,7 +14,7 @@ public final class Insertion {
     }
 
     /**
-     * This method compares two comparable objects and returns
+     * This method compares two comparable objects and returns,
      * true if the first object is less than second object.
      * @param  v the first object.
      * @param  w the second object.
@@ -31,7 +30,7 @@ public final class Insertion {
     }
 
     /**
-     * swaps two elements in the specified array.
+     * Swaps two elements in the specified array.
      * @param a the array.
      * @param i the ith index position.
      * @param j the jth index position.

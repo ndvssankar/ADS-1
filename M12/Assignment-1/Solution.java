@@ -39,10 +39,8 @@ public final class Solution {
                 tokens[6]);
             count++;
         }
-
         Insertion.sort(students);
         print(students);
-
         allotment(students, vacancies, noCategry, noOfBC,
                   noOfSC, noOfST);
     }
@@ -85,8 +83,9 @@ public final class Solution {
             if (noCategry > 0) {
                 noCategry--;
                 students[i].setAlloted(true);
-                alloted[k++] = students[i];
+                alloted[k] = students[i];
                 vacancies--;
+                k++;
             }
 
             if (noBC > 0) {
@@ -94,8 +93,9 @@ public final class Solution {
                         && students[i].getAlloted() != true) {
                     noBC--;
                     students[i].setAlloted(true);
-                    alloted[k++] = students[i];
+                    alloted[k] = students[i];
                     vacancies--;
+                    k++;
                 }
             }
 
@@ -104,8 +104,9 @@ public final class Solution {
                         && students[i].getAlloted() != true) {
                     noSC--;
                     students[i].setAlloted(true);
-                    alloted[k++] = students[i];
+                    alloted[k] = students[i];
                     vacancies--;
+                    k++;
                 }
             }
 
@@ -114,18 +115,21 @@ public final class Solution {
                         && students[i].getAlloted() != true) {
                     noST--;
                     students[i].setAlloted(true);
-                    alloted[k++] = students[i];
+                    alloted[k] = students[i];
                     vacancies--;
+                    k++;
                 }
             }
         }
 
         for (i = 0; i < N; i++) {
-            if (vacancies > 0 && students[i].getRc().equals("Open")
+            if (vacancies > 0
+                    && students[i].getRc().equals("Open")
                     && students[i].getAlloted() == false) {
                 students[i].setAlloted(true);
-                alloted[k++] = students[i];
+                alloted[k] = students[i];
                 vacancies--;
+                k++;
             }
         }
 
