@@ -51,8 +51,10 @@ public final class Solution {
 				break;
 				case "Float":
 					String line = scan.nextLine();
-					if (line.length() == 0)
+					if (line.length() == 0) {
+						System.out.println(false);
 						break;
+					}
 					tokens = line.split(",");
 					Float[] floats = new Float[tokens.length+1];
 					j = 1;
