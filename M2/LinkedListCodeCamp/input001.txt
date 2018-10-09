@@ -1,6 +1,0 @@
-pushLeft 10
-pushRight 20
-pushRight 30
-pushRight 40
-pushRight 50
-reverse
