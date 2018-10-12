@@ -84,14 +84,13 @@ public class Taxicab implements Comparable<Taxicab> {
                 // System.out.print(" = " + curr);
             }
             else {
-                if (run > 1) System.out.println();
+                if (run > 1);
                 run = 1;
             }
             prev = curr;
 
             if (curr.j < 500) pq.insert(new Taxicab(curr.i, curr.j + 1));
         }
-        if (run > 1) System.out.println();
         return res;
     }
 
