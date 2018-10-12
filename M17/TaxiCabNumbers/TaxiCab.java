@@ -60,7 +60,7 @@ public class Taxicab implements Comparable<Taxicab> {
         long res = 0;
         // initialize priority queue
         MinPQ<Taxicab> pq = new MinPQ<Taxicab>();
-        for (int i = 1; i <= 500; i++) {
+        for (int i = 1; i <= 600; i++) {
             pq.insert(new Taxicab(i, i));
         }
 
@@ -89,7 +89,7 @@ public class Taxicab implements Comparable<Taxicab> {
             }
             prev = curr;
 
-            if (curr.j < 500) pq.insert(new Taxicab(curr.i, curr.j + 1));
+            if (curr.j < 600) pq.insert(new Taxicab(curr.i, curr.j + 1));
         }
         return res;
     }
